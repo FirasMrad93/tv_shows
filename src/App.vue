@@ -1,10 +1,18 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <h1 @click="goToHomePage">TV SHOWS</h1>
   </nav>
   <router-view/>
 </template>
+
+<script setup lang="ts">
+import router from './router';
+
+const goToHomePage = () => {
+      router.push('/')
+
+}
+</script>
 
 <style>
 #app {
@@ -12,19 +20,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #192837;
 }
 
 nav {
-  padding: 30px;
+  padding-top: 30px;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+h1{
+  font-size: xx-large;
+  cursor: pointer;
 }
 </style>
